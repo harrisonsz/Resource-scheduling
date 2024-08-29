@@ -50,18 +50,12 @@ public:
         }
     }
 
-    Snapshot snapshotNow() {
-        Snapshot snapshot;
-        for (Node* node : nodes) {
-            snapshot[node] = node->CRT;
-        }
-        return snapshot;
+    Snapshot* snapshotNow() {
+        // somehow record the current state of the graph
     }
 
-    void restoreSnapshot(Snapshot snapshot) {
-        for (Node* node : nodes) {
-            node->CRT = snapshot[node];
-        }
+    void restoreSnapshot(Snapshot* snapshot) {
+        // restore the graph according to the given snapshot
     }
 };
 
